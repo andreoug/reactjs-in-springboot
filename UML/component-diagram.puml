@@ -1,0 +1,22 @@
+@startuml
+
+title Packages - Component Diagram
+
+cloud Internet {
+}
+
+package "ReactJs" {
+    component [Graphic User\nInterface] as GUI
+}
+
+
+node "Spring Boot Server" as Server {
+    component IndexController
+    [target/static/GUI] as STATIC
+}
+
+
+Internet -down-> IndexController
+GUI ..up.> STATIC
+
+@enduml
