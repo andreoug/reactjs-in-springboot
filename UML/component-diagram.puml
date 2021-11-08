@@ -12,7 +12,7 @@ package "ReactJs" {
 
 node "Spring Boot Server" as Server {
     component IndexController
-    [target/static/GUI] as STATIC
+    [target/static] as STATIC
 }
 
 
